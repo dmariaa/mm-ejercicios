@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Fondos</title>    
+    <style>
+      * {
+        font-family: "Trebuchet MS", sans-serif;
+      }
+
+      div {
+        display: inline-block;
+        width: 320px;
+        height: 200px;
+        padding: 16px;
+        margin: 8px;
+        border: 1px solid;
+      }
+
+      #div1 {
+        background-color: #f4ffa1;
+      }
+
+      #div2 {
+        background-image: url("https://picsum.photos/320/200");
+        background-repeat: no-repeat;
+        background-origin: content-box;
+      }
+
+      #div3 {
+        background-image: url("https://picsum.photos/320/200"),
+          linear-gradient(90deg,
+          rgba(131, 58, 180, 1) 0%,
+          rgba(253, 29, 29, 0.6) 60%,
+          rgba(252, 176, 69, 1) 100%);
+        background-repeat: no-repeat;
+        background-origin: content-box, padding-box;
+      }
+    </style> 
+  </head>
+  <body>
+    <div id="div1">DIV #1</div>
+    <div id="div2">DIV #2</div>
+    <div id="div3">DIV #3</div>
+  </body>
+</html>

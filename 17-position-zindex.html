@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Posición z-index</title>
+    <style>
+      * {
+        font-family: "Trebuchet MS", sans-serif;
+      }
+      div {
+        width: 300px;
+        height: 80px;
+        border: 1px dashed red;
+        background: green;
+        margin-bottom: 16px;
+        color: white;
+        padding: 4px;
+      }
+      .div-name {
+        font-weight: bold;
+      }
+      div.container {
+        position: relative;
+      }
+      div.absolute {
+        position: absolute;
+        background-color: orange;
+        width: 180px;
+        height: 200px;
+        right: 20px;
+        opacity: 0.8;
+        z-index: 1;
+      }
+      #div4 {
+        background-color: blue;
+        left: 20px;
+        top: -55px;
+      }      
+      #div2 {
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1" class="container">
+      <span class="div-name">#DIV1</span>
+      <div id="div2" class="absolute">
+        <span class="div-name">#DIV2</span>
+      </div>
+    </div>
+    <div id="div3" class="container">
+      <span class="div-name">#DIV3</span>
+      <div id="div4" class="absolute">
+        <span class="div-name">#DIV4</span>
+      </div>
+    </div>
+  </body>
+</html>

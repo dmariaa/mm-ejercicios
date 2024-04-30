@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Bordes, margenes, padding</title>   
+    <style>
+      * {
+        font-family: "Trebuchet MS", sans-serif;
+        padding: 0;
+        margin: 0;
+      }
+
+      .margen-padding {
+        font-size: 1.5em;
+        border: 1px solid black;
+        padding: 10px 0px 50px 15px;        
+      }
+
+      .texto-bordes {
+        margin: 8px 20% 8px 20%;        
+      }
+
+      .texto-bordes-2 {
+        border-bottom: 2px dashed red;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="margen-padding texto-bordes">Este texto tiene bordes, margen y padding</div>
+    <div class="margen-padding texto-bordes-2">Este texto tiene bordes y padding</div>
+  </body>
+</html>
