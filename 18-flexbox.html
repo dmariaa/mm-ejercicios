@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      html, body {
+        height: 100%;
+      }
+      .container {
+        height: 500px;
+        width: 100%;
+        border: 1px solid #0a0a0a;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .container div {
+        width: 100px;
+        height: 25px;
+        border: 1px dotted blue;
+
+        padding: 8px;
+        margin: 4px;
+
+        background-color: #5c5cfa;
+        color: white;
+
+        font-size: 1.2em;
+        flex-shrink: 0;
+        flex-grow: 1;
+      }
+
+      @media screen and (max-width: 500px) {
+        .container {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>DIV#1</div>
+      <div>DIV#2</div>
+      <div>DIV#3</div>
+      <div>DIV#4</div>
+      <div>DIV#5</div>
+      <div>DIV#6</div>
+    </div>
+  </body>
+</html>

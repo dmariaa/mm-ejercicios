@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="styles/02-main.css" />		
+		<script src="scripts/hello_world.js"></script>
+		<style>
+			.boton {
+				font-family: "Trebuchet MS", sans-serif;
+				font-size: 1.2em;
+
+				display: inline-block;
+				width: 100px;
+				height: 40px;
+				border: 1px solid #c0c0c0;
+
+				padding: 10px 20px;
+
+				color: #fff;
+			}
+			#boton1 {
+				background-color: darkred;				
+			}
+			#boton2 {
+				background-color: darkgreen;
+				position: relative;
+			}
+			#boton3 {
+				background-color: purple;
+			}
+
+			#boton2 ul {
+				display: none;
+
+				position: absolute;
+				left: 50px;
+				top: 25px;
+
+				border: 1px dashed yellow;
+				background-color: rgba(0, 0, 0, 0.5);
+				width: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="boton1" class="boton" onclick="alert('Hello world botón1')">Boton 1</div>
+		<div id="boton2" class="boton">
+			Boton 2
+			<ul>
+				<li>Item 1</li>
+				<li>Item 2</li>
+				<li>Item 3</li>
+				<li>Item 4</li>
+			</ul>
+		</div>
+		<div id="boton3" class="boton">Boton 3</div>		
+		<script>
+			var boton2 = document.getElementById('boton2');
+			boton2.addEventListener('click', () => {
+				boton2.innerText = "Has clickado sobre mi!!!!";
+			});
+			boton2.addEventListener('mouseover', () => {
+				var menu = boton2.firstElementChild;
+				menu.style.display = 'block';
+			});
+			boton2.addEventListener('mouseout', () => {
+				var menu = boton2.querySelector('ul');
+				menu.style.display = '';
+			});
+
+			var botones = document.querySelectorAll('.boton');
+
+			for(i = 0; i < botones.length; i++)
+			{
+				botones[i].addEventListener('mouseover', (e) => {
+					e.target.style.backgroundColor = "black";
+				});		
+
+				botones[i].addEventListener('mouseout', (e) => {
+					e.target.style.backgroundColor = "";
+				})
+			}
+		</script>
+	</body>
+</html>

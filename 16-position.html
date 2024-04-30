@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Posicionamiento de elemento0</title>
+    <style>
+      .box {
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        padding: 4px;
+        background-color: red;
+        color: white;
+        position: relative;
+      }      
+      .relative {
+        background-color: green;
+        top: 20px;
+        left: 20px;
+      }
+      #absolutos, #fijos {
+        position: relative;
+      }
+      .absolute {
+        position: absolute;
+        background-color: blue;
+        top: 20px;
+        left: 20px;
+      }
+      .fixed {
+        background-color: blueviolet;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Elementos estáticos</h1>
+    <div id="estaticos">
+      <div class="box">Box #1</div>
+      <div class="box">Box #2</div>
+      <div class="box">Box #3</div>
+    </div>
+
+    <h1>Elementos relativos</h1>
+    <div id="relativos">
+      <div class="box">Box #1</div>
+      <div class="box relative">Box #2</div>
+      <div class="box">Box #3</div>
+    </div>
+
+    <h1>Elementos absolutos</h1>
+    <div id="absolutos">
+      <div class="box">Box #1</div>
+      <div class="box absolute">Box #2</div>
+      <div class="box third">Box #3</div>
+    </div>
+
+    <h1>Elementos fijos</h1>
+    <div id="fijos">
+      <div class="box">Box #1</div>
+      <div class="box fixed">Box #2</div>
+      <div class="box">Box #3</div>
+    </div>
+  </body>
+</html>
